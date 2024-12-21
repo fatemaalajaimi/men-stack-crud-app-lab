@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <a href="/cars/new">Add a new Car</a>
+    <h3>Cars</h3>
+    <ul>
+      <% cars.forEach((car) => { %>
+      <!-- views/listings/index.ejs -->
+
+      <li>
+        <p>Name : <%= car.name %></p>
+        <a href="/cars/<%= car._id %>">View more details.</a>
+      </li>
+
+      <% }) %>
+    </ul>
+  </body>
+</html>
